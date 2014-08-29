@@ -30,15 +30,17 @@ TARGET_USE_KRAIT_BIONIC_OPTIMIZATION := true
 
 # Display / GPU
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
+TARGET_DISPLAY_USE_RETIRE_FENCE := true
+TARGET_USES_C2D_COMPOSITION := true
+TARGET_USES_OVERLAY := true
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 USE_OPENGL_RENDERER := true
 TARGET_USES_ION := true
-NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 HAVE_ADRENO_SOURCE:= false
 
 # Kernel
 BOARD_KERNEL_BASE     := 0x00000000
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=g2 user_debug=31 msm_rtb.filter=0x0 mdss_mdp.panel=1:dsi:0:qcom,mdss_dsi_g2_lgd_cmd
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=g2 user_debug=31 msm_rtb.filter=0x0
 BOARD_MKBOOTIMG_ARGS  := --ramdisk_offset 0x05000000 --tags_offset 0x04800000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
