@@ -238,7 +238,18 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	af.resampler.quality=4 \
 	audio.offload.buffer.size.kb=32 \
 	audio.offload.gapless.enabled=false \
-	av.offload.enable=true
+	av.offload.enable=true \
+	audio.offload.pcm.enable=true \
+        audio.offload.24bit.enable=1
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.audio.calfile0=/etc/Bluetooth_cal.acdb \
+    persist.audio.calfile1=/etc/General_cal.acdb \
+    persist.audio.calfile2=/etc/Global_cal.acdb \
+    persist.audio.calfile3=/etc/Handset_cal.acdb \
+    persist.audio.calfile4=/etc/Hdmi_cal.acdb \
+    persist.audio.calfile5=/etc/Headset_cal.acdb \
+    persist.audio.calfile6=/etc/Speaker_cal.acdb
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	persist.sys.usb.config=mtp
