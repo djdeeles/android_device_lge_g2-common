@@ -92,6 +92,9 @@
 
     <!-- Boolean indicating whether the wifi chipset has background scan support -->
     <bool translatable="false" name="config_wifi_background_scan_support">false</bool>
+    
+    <!-- Wifi driver supports batched scan -->
+    <bool translatable="false" name="config_wifi_batched_scan_supported">true</bool>
 
     <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
     <bool name="config_intrusiveNotificationLed">true</bool>
@@ -140,6 +143,9 @@
     <integer-array name="config_virtualKeyVibePattern">
         <item>7</item>
     </integer-array>
+    
+    <!-- Make things go fast -->
+    <bool name="config_ui_enableFadingMarquee">false</bool>
 
     <!-- Vibrator pattern for a very short but reliable vibration for soft keyboard tap -->
     <integer-array name="config_keyboardTapVibePattern">
@@ -267,6 +273,13 @@
         <item>850</item>    <!-- Bottom -->
         <item>880</item>    <!-- Right -->
     </integer-array>
+    
+    <!-- Indicate whether to allow the device to suspend when the screen is off
+         due to the proximity sensor.  This resource should only be set to true
+         if the sensor HAL correctly handles the proximity sensor as a wake-up source.
+         Otherwise, the device may fail to wake out of suspend reliably.
+         The default is false. -->
+    <bool name="config_suspendWhenScreenOffDueToProximity">true</bool>
     
     <!-- Enable the option to check proximity sensor when deciding whether to		
          turn the screen on
