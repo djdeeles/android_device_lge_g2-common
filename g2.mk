@@ -237,10 +237,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	persist.audio.fluence.speaker=false \
 	af.resampler.quality=4 \
 	audio.offload.buffer.size.kb=32 \
-	audio.offload.gapless.enabled=false \
+	audio.offload.gapless.enabled=true \
 	av.offload.enable=true \
+	av.streaming.offload.enable=true \
 	audio.offload.pcm.enable=true \
-        audio.offload.24bit.enable=1
+	audio.offload.24bit.enable=1
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.audio.calfile0=/etc/Bluetooth_cal.acdb \
